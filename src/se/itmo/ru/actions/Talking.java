@@ -1,16 +1,13 @@
 package se.itmo.ru.actions;
 
 public interface Talking extends MakingSound {
-    //TODO
+    String DEFAULT_PHRASE = "DEFAULT PHRASE!";
 
-//    private static final String DEFAULT_PHRASE = "DEFAULT PHRASE!";
-//
-//    @Override
-//    public void execute() {
-//        say(DEFAULT_PHRASE);
-//    }
-//
-//    public void say(String phrase) {
-//        System.out.println(phrase);
-//    }
+    default void sayPhrase(String phrase) {
+        makeSound(phrase);
+    }
+
+    default void say() {
+        sayPhrase(DEFAULT_PHRASE);
+    }
 }

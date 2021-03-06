@@ -7,7 +7,7 @@ public interface MakingSound {
         System.out.println(sound);
     }
 
-    default void makeSound() {
+    default void makeDefaultSound() {
         makeSound(DEFAULT_SOUND);
     }
 }
